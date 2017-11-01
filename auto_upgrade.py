@@ -24,20 +24,25 @@ UPGRADE_41 = 'sdcc_upgrade_mbi:japan,10.20.4.77,10.20.4.122,all'
 ##MSSP Setup
 UPGRADE_5 = 'sdcc_upgrade_sni:mssp_2.2,10.20.4.178,all'
 
-UPGRADES = [UPGRADE_1,
-            UPGRADE_11,
-            UPGRADE_2,
-            UPGRADE_3,
-            UPGRADE_4,
-            UPGRADE_41,
-            UPGRADE_5]
+UPGRADES_J = [UPGRADE_1,
+              UPGRADE_11,
+              UPGRADE_2,
+              UPGRADE_3,
+              UPGRADE_4,
+              UPGRADE_41]
 
-UPGRADE_STRING = '"' + '","'.join(upgrade.replace(',', '\,') for upgrade in UPGRADES) + '"'
+UPGRADES_MSSP = [UPGRADE_5]
+
+UPGRADE_STRING_J = '"' + '","'.join(upgrade.replace(',', '\,') for upgrade in UPGRADES_J) + '"'
+UPGRADE_STRING_MSSP = '"' + '","'.join(upgrade.replace(',', '\,') for upgrade in UPGRADES_MSSP) + '"'
 
 
 def run_update():
     with settings(host_string=env.hosts[0]):
-        run('fab -f /root/automation_japan/fabfile.py auto_upgrade:' + UPGRADE_STRING)
+        run(
+            'fab -f /root/automation_japan/fabfile.py auto_upgrade:' + UPGRADE_STRING_J + ' >>C:\Users\Eli\Documents\Scripts\General\LOG\Exec-Upgrade_J.log')
+        run(
+            'fab -f /root/automation_mssp_2.2/fabfile.py auto_upgrade:' + UPGRADE_STRING_MSSP + ' >>C:\Users\Eli\Documents\Scripts\General\LOG\Exec-Upgrade_MSSP.log')
 
 
 if __name__ == '__main__':
