@@ -38,8 +38,8 @@ UPGRADE_STRING_MSSP = '"' + '","'.join(upgrade.replace(',', '\,') for upgrade in
 
 def run_update():
     with settings(host_string=env.hosts[0]):
-        run('fab -f /root/automation_japan/fabfile.py auto_upgrade:' + UPGRADE_STRING_J + ' >>C:\Users\Eli\Documents\Scripts\General\LOG\Exec-Upgrade_J.log')
-        run('fab -f /root/automation_mssp_2.2/fabfile.py auto_upgrade:' + UPGRADE_STRING_MSSP + ' >>C:\Users\Eli\Documents\Scripts\General\LOG\Exec-Upgrade_MSSP.log')
+        run('fab -f /root/automation_japan/fabfile.py auto_upgrade:' + UPGRADE_STRING_J )
+        run('fab -f /root/automation_mssp_2.2/fabfile.py auto_upgrade:' + UPGRADE_STRING_MSSP )
 
 if __name__ == '__main__':
     run_update()
