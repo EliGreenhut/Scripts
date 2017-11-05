@@ -7,10 +7,10 @@ env.password = 'radware'
 
 def run_update():
     with settings(host_string=env.hosts[0]):
-        run('python DP_TrafficUtilizationSimulator.py --rate 50 --duration 5 --device 10.20.6.10 --policy PO-ST-S1-1')
-        run('python DP_TrafficUtilizationSimulator.py --rate 70 --duration 5 --device 10.20.6.10 --policy PO-ST-S1-1')
-        run('python DP_TrafficUtilizationSimulator.py --rate 90 --duration 5 --device 10.20.6.10 --policy PO-ST-S1-1')
-        run('python DP_TrafficUtilizationSimulator.py --rate 30 --duration 5 --device 10.20.6.10 --policy PO-ST-S1-1')
+        run('python DP_TrafficUtilizationSimulator.py --rate 50 --duration 10 --device 10.20.6.10 --policy PO-ST-S1-1')
+        run('python DP_TrafficUtilizationSimulator.py --rate 70 --duration 10 --device 10.20.6.10 --policy PO-ST-S1-1')
+        run('python DP_TrafficUtilizationSimulator.py --rate 90 --duration 10 --device 10.20.6.10 --policy PO-ST-S1-1')
+        run('python DP_TrafficUtilizationSimulator.py --rate 30 --duration 10 --device 10.20.6.10 --policy PO-ST-S1-1')
 
 if __name__ == '__main__':
     run_update()
