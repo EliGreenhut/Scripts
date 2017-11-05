@@ -12,5 +12,5 @@ def run_command(cmd, host):
         run(cmd)
 
 if __name__ == '__main__':
-    run_command('python DP_TrafficUtilizationSimulator.py --rate 50 --duration 10 --device 10.20.6.10 --policy PO-ST-S1-1', '10.20.4.237')
-    run_command('python DP_TrafficUtilizationSimulator.py --rate 50 --duration 10 --device 10.20.6.10 --policy PO-ST-S1-1', '10.20.4.238')
+    run_command('python DP_TrafficUtilizationSimulator.py --rate 40 --duration 10 --device 10.20.6.20 --policy PO-S2-N-Traf1', '10.20.4.237')
+    run_command('python DP_TrafficUtilizationSimulator.py --rate 65 --duration 10 --device 10.20.6.20 --policy PO-S2-N-Traf2', '10.20.4.237')
