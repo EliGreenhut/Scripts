@@ -8,9 +8,9 @@ env.password = 'radware'
 
 def run_command():
     with settings(host_string=env.hosts[0]):
-        run('python DP_TrafficUtilizationSimulator.py --rate 50 --duration 10 --device 10.20.6.10 --policy PO-ST-S1-1')
-        run('python DP_TrafficUtilizationSimulator.py --rate 70 --duration 15 --device 10.20.6.10 --policy PO-ST-S1-1')
-        run('python DP_TrafficUtilizationSimulator.py --rate 90 --duration 10 --device 10.20.6.10 --policy PO-ST-S1-1')
+        run('python DP_TrafficUtilizationSimulator.py --rate 25 --duration 10 --device 10.20.6.10 --policy PO-ST-S1-1')
+        run('python DP_TrafficUtilizationSimulator.py --rate 45 --duration 15 --device 10.20.6.10 --policy PO-ST-S1-1')
+        run('python DP_TrafficUtilizationSimulator.py --rate 65 --duration 10 --device 10.20.6.10 --policy PO-ST-S1-1')
         run('python DP_TrafficUtilizationSimulator.py --rate 30 --duration 15 --device 10.20.6.10 --policy PO-ST-S1-1')
 
 if __name__ == '__main__':
