@@ -20,6 +20,7 @@ if __name__ == '__main__':
     run_command()
 
 time.sleep (900)
+
 # -----------------------------------------------------------------
 # Traffic in two assets (non-MSA), in parallel, related to one site
 # -----------------------------------------------------------------
@@ -34,6 +35,7 @@ if __name__ == '__main__':
         'python DP_TrafficUtilizationSimulator.py --rate 75 --duration 15 --device 10.20.6.20 --policy PO-S2-N-Traf2 >& /dev/null < /dev/null &')
 
 time.sleep (900)
+
 # -----------------------------------------------------
 # Traffic in one asset (MSA) related to three sites
 # -----------------------------------------------------
@@ -52,6 +54,7 @@ if __name__ == '__main__':
     run_command()
 
 time.sleep (1200)
+
 # -----------------------------------------------------
 # Attack on Network asset
 # -----------------------------------------------------
@@ -72,19 +75,18 @@ if __name__ == '__main__':
 
 time.sleep(900)
 
-env.user = 'root'  # Default user name for automation station
-env.password = 'securitydam'
-
 # -----------------------------------------------------
 # Traffic on Diverted asset (through SC)
 # -----------------------------------------------------
+env.user = 'root'  # Default user name for automation station
+env.password = 'securitydam'
+
 def run_command():
     with settings(host_string='10.20.4.228'):
         run(
             'python /root/automation_japan/Simulators/NetflowSimulator.py --rate 30 --duration 10 --asset 111.1.6.0 --sdcc 10.20.4.132 --port 9996')
         run(
             'python /root/automation_japan/Simulators/NetflowSimulator.py --rate 20 --duration 10 --asset 111.1.6.0 --sdcc 10.20.4.132 --port 9995')
-
 
 time.sleep(1500)
 
