@@ -70,4 +70,23 @@ def run_command():
 if __name__ == '__main__':
     run_command()
 
-time.sleep(3600)
+time.sleep(900)
+
+env.user = 'root'  # Default user name for automation station
+env.password = 'securitydam'
+
+# -----------------------------------------------------
+# Traffic on Diverted asset (through SC)
+# -----------------------------------------------------
+def run_command():
+    with settings(host_string='10.20.4.228'):
+        run(
+            'python /root/automation_japan/Simulators/NetflowSimulator.py --rate 30 --duration 10 --asset 111.1.6.0 --sdcc 10.20.4.132 --port 9996')
+        run(
+            'python /root/automation_japan/Simulators/NetflowSimulator.py --rate 20 --duration 10 --asset 111.1.6.0 --sdcc 10.20.4.132 --port 9995')
+
+
+time.sleep(1500)
+
+if __name__ == '__main__':
+    run_command()
