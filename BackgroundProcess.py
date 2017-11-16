@@ -3,8 +3,6 @@ from fabric.context_managers import settings
 # from fabric.decorators import parallel
 import time
 
-
-
 # -----------------------------------------------------
 #  Traffic directly on site
 # -----------------------------------------------------
