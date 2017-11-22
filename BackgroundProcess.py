@@ -40,9 +40,9 @@ def traffic_msa_asset():
 def attack_nasset():
     with settings(host_string='10.20.4.237'):
         run('python DP_SecurityAttacksSimulator.py --rate 20 --policy PO-S2-N-Atk1 --device 10.20.6.20 --dest 200.10.14.0 --attack 70 --duration 10', pty=False)
-        run('python DP_SecurityAttacksSimulator.py --rate 40 --policy PO-S2-N-Atk1 --device 10.20.6.20 --dest 200.10.14.0 --attack 71 --duration 5', pty=False)
-        run('python DP_SecurityAttacksSimulator.py --rate 80 --policy PO-S2-N-Atk1 --device 10.20.6.20 --dest 200.10.14.0 --attack 72 --duration 10', pty=False)
-        run('python DP_SecurityAttacksSimulator.py --rate 60 --policy PO-S2-N-Atk1 --device 10.20.6.20 --dest 200.10.14.0 --attack 73 --duration 5', pty=False)
+        run('python DP_SecurityAttacksSimulator.py --rate 40 --policy PO-S2-N-Atk2 --device 10.20.6.20 --dest 200.10.15.0 --attack 71 --duration 5', pty=False)
+        run('python DP_SecurityAttacksSimulator.py --rate 80 --policy PO-S2-N-Atk3 --device 10.20.6.20 --dest 200.10.16.0 --attack 72 --duration 10', pty=False)
+        run('python DP_SecurityAttacksSimulator.py --rate 60 --policy PO-S2-N-Atk4 --device 10.20.6.20 --dest 200.10.17.0 --attack 73 --duration 5', pty=False)
 
 
 # -----------------------------------------------------
