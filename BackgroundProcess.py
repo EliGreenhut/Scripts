@@ -50,8 +50,8 @@ def attack_nasset():
 # -----------------------------------------------------
 def ingress_egress():
     with settings(host_string='10.20.4.228'):
-        run('python /root/automation_japan/Simulators/NetflowSimulator.py --rate 30 --duration 10 --asset 111.1.6.0 --sdcc 10.20.4.132 --port 9996', pty=False)
-        run('python /root/automation_japan/Simulators/NetflowSimulator.py --rate 20 --duration 10 --asset 111.1.6.0 --sdcc 10.20.4.132 --port 9995', pty=False)
+        run('python /root/automation_japan/Simulators/NetflowSimulator.py --rate 30 --duration 20 --asset 111.1.6.0 --sdcc 10.20.4.132 --port 9996', pty=False)
+        run('python /root/automation_japan/Simulators/NetflowSimulator.py --rate 20 --duration 20 --asset 111.1.6.0 --sdcc 10.20.4.132 --port 9995', pty=False)
 
 
 if __name__ == '__main__':
