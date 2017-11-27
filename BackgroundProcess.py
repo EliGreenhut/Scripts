@@ -72,4 +72,4 @@ if __name__ == '__main__':
     env.password = 'securitydam'
 
     ingress_egress()
-    time.sleep(1500)
+#   time.sleep(300)
