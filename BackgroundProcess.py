@@ -60,13 +60,13 @@ if __name__ == '__main__':
     env.password = 'radware'
 
     traffic_site()
-    time.sleep(900)
+    time.sleep(600)
     traffic_2assets()
-    time.sleep(900)
+    time.sleep(600)
     traffic_msa_asset()
-    time.sleep(1200)
+    time.sleep(600)
     attack_nasset()
-    time.sleep(900)
+    time.sleep(600)
 
     env.user = 'root'  # Default user name for automation station
     env.password = 'securitydam'

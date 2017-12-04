@@ -8,15 +8,15 @@ env.password = 'securitydam'
 NAVIGATE = 'cd /root/automation_japan/'
 
 ##Master Setup (Test setup)
-UPGRADE_1 = 'sdcc_upgrade_tni:japan-sp1,10.20.4.81,10.20.4.4,10.20.4.70,all'
-UPGRADE_11 = 'sdcc_upgrade_mbi:japan-sp1,10.20.4.132,10.20.4.4,all'
+UPGRADE_1 = 'sdcc_upgrade_tni:master,10.20.4.81,10.20.4.4,10.20.4.70,all'
+UPGRADE_11 = 'sdcc_upgrade_mbi:master,10.20.4.132,10.20.4.4,all'
 
 ##Screen comparison
-UPGRADE_2 = 'sdcc_upgrade_sni:japan-sp1,10.20.4.72,all'
+UPGRADE_2 = 'sdcc_upgrade_sni:master,10.20.4.72,all'
 
 ##Master Setup (For migration tests)
-UPGRADE_4 = 'sdcc_upgrade_tni:japan,10.20.4.68,10.20.4.122,10.20.4.8,all'
-UPGRADE_41 = 'sdcc_upgrade_mbi:japan,10.20.4.77,10.20.4.122,all'
+UPGRADE_4 = 'sdcc_upgrade_tni:japan-sp1,10.20.4.68,10.20.4.122,10.20.4.8,all'
+UPGRADE_41 = 'sdcc_upgrade_mbi:japan-sp1,10.20.4.77,10.20.4.122,all'
 
 ##MSSP Setup
 UPGRADE_5 = 'sdcc_upgrade_sni:mssp_2.3,10.20.4.178,all'
