@@ -1,7 +1,7 @@
 from fabric.api import env, run
 from fabric.context_managers import settings
 
-env.hosts = ['10.20.4.222']  # Default remote host IP address. Overidden during deployment
+env.hosts = ['10.20.4.228']  # Default remote host IP address. Overidden during deployment
 env.user = 'root'  # Default VMs user name
 env.password = 'securitydam'
 
