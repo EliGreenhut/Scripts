@@ -21,6 +21,7 @@ UPGRADE_41 = 'sdcc_upgrade_mbi:japan-sp1,10.20.4.77,10.20.4.122,all'
 ##MSSP Setup
 # UPGRADE_5 = 'sdcc_upgrade_sni:mssp_2.3,10.20.4.178,all'
 
+
 UPGRADES_J = [UPGRADE_1,
               UPGRADE_11,
               UPGRADE_2,
