@@ -9,18 +9,18 @@ env.password = 'securitydam'
 ## NAVIGATE_K = 'cd /root/automation_kenya/'
 
 ##Master Setup (Test setup)
-UPGRADE_1 = 'sdcc_upgrade_tni:master,10.20.4.81,10.20.4.4,10.20.4.70,service=defense-pipe,content=all'
+UPGRADE_1 = 'sdcc_upgrade_tni:master,10.20.4.81,10.20.4.4,10.20.4.70,services=defense-pipe,content=all'
 UPGRADE_11 = 'sdcc_upgrade_mbi:master,10.20.4.132,10.20.4.4,content=all'
 
 ##Screen comparison
-UPGRADE_2 = 'sdcc_upgrade_sni:master,10.20.4.72,service=defense-pipe,content=all'
+UPGRADE_2 = 'sdcc_upgrade_sni:master,10.20.4.72,services=defense-pipe,content=all'
 
 ##Master Setup (For migration tests)
-UPGRADE_4 = 'sdcc_upgrade_tni:japan-sp1,10.20.4.68,10.20.4.122,10.20.4.8,service=defense-pipe,content=all'
+UPGRADE_4 = 'sdcc_upgrade_tni:japan-sp1,10.20.4.68,10.20.4.122,10.20.4.8,services=defense-pipe,content=all'
 UPGRADE_41 = 'sdcc_upgrade_mbi:japan-sp1,10.20.4.77,10.20.4.122,content=all'
 
 ##MSSP Setup
-UPGRADE_5 = 'sdcc_upgrade_sni:mssp_2.3,10.20.4.178,service=mssp-portal,content=all'
+UPGRADE_5 = 'sdcc_upgrade_sni:mssp_2.3,10.20.4.178,services=mssp-portal,content=all'
 
 UPGRADES_K = [UPGRADE_1,
               UPGRADE_11]
