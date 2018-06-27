@@ -38,7 +38,7 @@ def run_update():
         run('fab -f /root/automation_kenya/fabfile.py auto_upgrade:' + UPGRADE_STRING_K)
         print '########## END OF KENYA_SP1 SETUP UPGRADE ##########'
         print '################################################'
-        run('fab -f /root/automation_japan/fabfile.py auto_upgrade:' + UPGRADE_STRING_J )
+        run('fab -f /root/automation_kenya/fabfile.py auto_upgrade:' + UPGRADE_STRING_J )
         print '########## END OF KENYA_SP1 SETUP UPGRADE ##########'
         print '################################################'
         run('fab -f /root/automation_mssp_2.3/fabfile.py auto_upgrade:' + UPGRADE_STRING_MSSP )
