@@ -13,8 +13,8 @@ env.password = 'securitydam'
 #UPGRADE_11 = 'sdcc_upgrade_mbi:kenya_sp1,10.20.4.132,10.20.4.4,all'
 
 ##Master Setup (Test setup)
-UPGRADE_1 = 'sdcc_upgrade_tni:kenya,10.20.4.81,10.20.4.4,10.20.4.70,all'
-UPGRADE_11 = 'sdcc_upgrade_mbi:kenya,10.20.4.132,10.20.4.4,all'
+UPGRADE_1 = 'sdcc_upgrade_tni:kenya_div_update,10.20.4.81,10.20.4.4,10.20.4.70,all'
+UPGRADE_11 = 'sdcc_upgrade_mbi:kenya_div_update,10.20.4.132,10.20.4.4,all'
 
 ##Screen comparison
 UPGRADE_2 = 'sdcc_upgrade_sni:kenya_sp1,10.20.4.72,all'
