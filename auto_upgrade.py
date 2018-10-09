@@ -13,8 +13,8 @@ UPGRADE_11 = 'sdcc_upgrade_mbi:master,10.20.4.132,10.20.4.4,all'
 UPGRADE_2 = 'sdcc_upgrade_sni:kenya_sp1,10.20.4.72,all'
 
 ##Master Setup (For migration tests)
-UPGRADE_4 = 'sdcc_upgrade_tni:kenya_sp2,10.20.4.68,10.20.4.122,10.20.4.8,all'
-UPGRADE_41 = 'sdcc_upgrade_mbi:kenya_sp2,10.20.4.77,10.20.4.122,all'
+UPGRADE_4 = 'sdcc_upgrade_tni:kenya_sp1,10.20.4.68,10.20.4.122,10.20.4.8,all'
+UPGRADE_41 = 'sdcc_upgrade_mbi:kenya_sp1,10.20.4.77,10.20.4.122,all'
 
 ##MSSP Setup
 UPGRADE_5 = 'sdcc_upgrade_sni:mssp_2.3,10.20.4.178,all'
@@ -37,7 +37,7 @@ def run_update():
         print '########## END OF MASTER SETUP UPGRADE ##########'
         print '################################################'
         run('fab -f /root/automation_kenya/fabfile.py auto_upgrade:' + UPGRADE_STRING_J )
-        print '########## END OF KENYA_SP2 SETUP UPGRADE ##########'
+        print '########## END OF KENYA_SP1 SETUP UPGRADE ##########'
         print '################################################'
         run('fab -f /root/automation_mssp_2.3/fabfile.py auto_upgrade:' + UPGRADE_STRING_MSSP )
         print '########## END OF MSSP_2.3 SETUP UPGRADE ##########'
