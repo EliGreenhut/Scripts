@@ -19,26 +19,26 @@ UPGRADE_41 = 'sdcc_upgrade_mbi:kenya_sp1,10.20.4.77,10.20.4.122,all'
 ##MSSP Setup
 UPGRADE_5 = 'sdcc_upgrade_sni:mssp_2.3,10.20.4.178,all'
 
-UPGRADES_K = [UPGRADE_1,
+UPGRADES_L = [UPGRADE_1,
               UPGRADE_11]
 
-UPGRADES_J = [UPGRADE_4,
+UPGRADES_K = [UPGRADE_4,
               UPGRADE_41]
 
 UPGRADES_MSSP = [UPGRADE_5]
 
+UPGRADE_STRING_L = '"' + '","'.join(upgrade.replace(',', '\,') for upgrade in UPGRADES_L) + '"'
 UPGRADE_STRING_K = '"' + '","'.join(upgrade.replace(',', '\,') for upgrade in UPGRADES_K) + '"'
-UPGRADE_STRING_J = '"' + '","'.join(upgrade.replace(',', '\,') for upgrade in UPGRADES_J) + '"'
 UPGRADE_STRING_MSSP = '"' + '","'.join(upgrade.replace(',', '\,') for upgrade in UPGRADES_MSSP) + '"'
 
 def run_update():
     with settings(host_string=env.hosts[0]):
-        run('fab -f /root/automation_latvia/fabfile.py auto_upgrade:' + UPGRADE_STRING_K)
+        run('fab -f /root/automation_latvia/fabfile.py auto_upgrade:' + UPGRADE_STRING_L )
         print '########## END OF MASTER SETUP UPGRADE ##########'
         print '################################################'
-        run('fab -f /root/automation_kenya/fabfile.py auto_upgrade:' + UPGRADE_STRING_J )
-        print '########## END OF KENYA_SP1 SETUP UPGRADE ##########'
-        print '################################################'
+##        run('fab -f /root/automation_kenya/fabfile.py auto_upgrade:' + UPGRADE_STRING_K )
+##        print '########## END OF KENYA_SP1 SETUP UPGRADE ##########'
+##        print '################################################'
         run('fab -f /root/automation_mssp_2.3/fabfile.py auto_upgrade:' + UPGRADE_STRING_MSSP )
         print '########## END OF MSSP_2.3 SETUP UPGRADE ##########'
         print '###############################################'
