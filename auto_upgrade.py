@@ -6,8 +6,8 @@ env.user = 'root'  # Default VMs user name
 env.password = 'securitydam'
 
 ##Master Setup (Test setup)
-UPGRADE_1 = 'sdcc_upgrade_tni:kenya_sp2,10.20.4.81,10.20.4.4,10.20.4.70,all'
-UPGRADE_11 = 'sdcc_upgrade_mbi:kenya_sp2,10.20.4.132,10.20.4.4,all'
+UPGRADE_1 = 'sdcc_upgrade_tni:master,10.20.4.81,10.20.4.4,10.20.4.70,all'
+UPGRADE_11 = 'sdcc_upgrade_mbi:master,10.20.4.132,10.20.4.4,all'
 
 ##Screen comparison
 UPGRADE_2 = 'sdcc_upgrade_sni:kenya_sp1,10.20.4.72,all'
@@ -33,12 +33,16 @@ UPGRADE_STRING_MSSP = '"' + '","'.join(upgrade.replace(',', '\,') for upgrade in
 
 def run_update():
     with settings(host_string=env.hosts[0]):
-##        run('fab -f /root/automation_latvia/fabfile.py auto_upgrade:' + UPGRADE_STRING_L )
-##        print '########## END OF MASTER SETUP UPGRADE ##########'
-##        print '################################################'
+        run('fab -f /root/automation_latvia/fabfile.py auto_upgrade:' + UPGRADE_STRING_L )
+        print '###########################################################'
+        print '########## END OF PRIMARY SETUP (MASTER) UPGRADE ##########'
+        print '###########################################################'
+##
         run('fab -f /root/automation_kenya/fabfile.py auto_upgrade:' + UPGRADE_STRING_K )
-        print '########## END OF KENYA_SP1 SETUP UPGRADE ##########'
-        print '################################################'
+        print '################################################################'
+        print '########## END OF SECONDARY SETUP (KENYA_SP2) UPGRADE ##########'
+        print '################################################################'
+##
 ##        run('fab -f /root/automation_mssp_2.3/fabfile.py auto_upgrade:' + UPGRADE_STRING_MSSP )
 ##        print '########## END OF MSSP_2.3 SETUP UPGRADE ##########'
 ##        print '###############################################'
