@@ -42,7 +42,7 @@ def run_update():
         print '################################################################'
         print '########## END OF SECONDARY SETUP (KENYA_SP2) UPGRADE ##########'
         print '################################################################'
-##
+
 ##        run('fab -f /root/automation_mssp_2.3/fabfile.py auto_upgrade:' + UPGRADE_STRING_MSSP )
 ##        print '########## END OF MSSP_2.3 SETUP UPGRADE ##########'
 ##        print '###############################################'
