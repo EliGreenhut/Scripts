@@ -13,8 +13,8 @@ UPGRADE_11 = 'sdcc_upgrade_mbi:master,10.20.4.132,10.20.4.4,all'
 UPGRADE_2 = 'sdcc_upgrade_sni:kenya_sp1,10.20.4.72,all'
 
 ##Master Setup (For migration tests)
-UPGRADE_4 = 'sdcc_upgrade_tni:kenya_sp2,10.20.4.68,10.20.4.122,10.20.4.9,all'
-UPGRADE_41 = 'sdcc_upgrade_mbi:kenya_sp2,10.20.4.77,10.20.4.122,all'
+UPGRADE_4 = 'sdcc_upgrade_tni:master,10.20.4.68,10.20.4.122,10.20.4.9,all'
+UPGRADE_41 = 'sdcc_upgrade_mbi:master,10.20.4.77,10.20.4.122,all'
 
 ##MSSP Setup
 UPGRADE_5 = 'sdcc_upgrade_sni:mssp_2.3,10.20.4.178,all'
@@ -33,10 +33,10 @@ UPGRADE_STRING_MSSP = '"' + '","'.join(upgrade.replace(',', '\,') for upgrade in
 
 def run_update():
     with settings(host_string=env.hosts[0]):
-        run('fab -f /root/automation_latvia/fabfile.py auto_upgrade:' + UPGRADE_STRING_L )
-        print '###########################################################'
-        print '########## END OF PRIMARY SETUP (MASTER) UPGRADE ##########'
-        print '###########################################################'
+##        run('fab -f /root/automation_latvia/fabfile.py auto_upgrade:' + UPGRADE_STRING_L )
+##        print '###########################################################'
+##        print '########## END OF PRIMARY SETUP (MASTER) UPGRADE ##########'
+##        print '###########################################################'
 ##
         run('fab -f /root/automation_kenya/fabfile.py auto_upgrade:' + UPGRADE_STRING_K )
         print '################################################################'
