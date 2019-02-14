@@ -46,5 +46,5 @@ if __name__ == '__main__':
     traffic_all()
     time.sleep(900)
 
-    env.user = 'root'  # Default user name for automation station
-    env.password = 'securitydam'
+#    env.user = 'root'  # Default user name for automation station
+#    env.password = 'securitydam'
