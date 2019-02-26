@@ -17,7 +17,7 @@ def traffic_all():
 # S2
         run('python DP_TrafficUtilizationSimulator.py --rate 30 --duration 15 --device 10.20.6.20 --policy PO-AC1-ST2', pty=False)
 # 1.1+1.2+1.3
-        run('python DP_TrafficUtilizationSimulator.py --rate 20 --duration 15 --device 10.20.6.20 --policy PO-AC1-ST1-AS1 >& /dev/null < /dev/null &', pty=False)
+        run('python DP_TrafficUtilizationSimulator.py --rate 20 --duration 15 --device 10.20.6.20 --policy PO-AC1-ST1-AS1 >& PyCharm /dev/null < /dev/null &', pty=False)
         run('python DP_TrafficUtilizationSimulator.py --rate 40 --duration 15 --device 10.20.6.20 --policy PO-AC1-ST1-AS2 >& /dev/null < /dev/null &', pty=False)
         run('python DP_TrafficUtilizationSimulator.py --rate 60 --duration 15 --device 10.20.6.20 --policy PO-AC1-ST1-AS3 >& /dev/null < /dev/null &', pty=False)
 # S1+S3
