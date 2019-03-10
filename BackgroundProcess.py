@@ -10,7 +10,7 @@ def traffic_site():
     with settings(host_string='10.20.4.238'):
         run('python DP_TrafficUtilizationSimulator.py --rate 25 --duration 10 --device 10.20.6.10 --policy PO-ST-S1-1', pty=False)
         run('python DP_TrafficUtilizationSimulator.py --rate 45 --duration 10 --device 10.20.6.10 --policy PO-ST-S1-1', pty=False)
-        run('python DP_TrafficUtilizationSimulator.py --rate 65 --duration 10 --device 10.20.6.10 --policy PO-ST-S1-1', pty=False)
+        run('python DP_TrafficUtilizationSimulator.py --rate 85 --duration 10 --device 10.20.6.10 --policy PO-ST-S1-1', pty=False)
         run('python DP_TrafficUtilizationSimulator.py --rate 30 --duration 10 --device 10.20.6.10 --policy PO-ST-S1-1', pty=False)
 
 
@@ -24,13 +24,13 @@ def traffic_2assets():
 
 
 # -----------------------------------------------------
-# Traffic in one asset (MSA) related to three sites
+# Traffic in one MSA asset related to two sites
 # -----------------------------------------------------
 def traffic_msa_asset():
     with settings(host_string='10.20.4.238'):
         run('python DP_TrafficUtilizationSimulator.py --rate 25 --duration 10 --device 10.20.6.10 --policy PO-M1-Traffic1', pty=False)
         run('python DP_TrafficUtilizationSimulator.py --rate 45 --duration 10 --device 10.20.6.10 --policy PO-M1-Traffic1', pty=False)
-        run('python DP_TrafficUtilizationSimulator.py --rate 65 --duration 10 --device 10.20.6.10 --policy PO-M1-Traffic1', pty=False)
+        run('python DP_TrafficUtilizationSimulator.py --rate 85 --duration 10 --device 10.20.6.10 --policy PO-M1-Traffic1', pty=False)
         run('python DP_TrafficUtilizationSimulator.py --rate 30 --duration 10 --device 10.20.6.10 --policy PO-M1-Traffic1', pty=False)
 
 
