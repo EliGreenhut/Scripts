@@ -4,7 +4,7 @@ from fabric.context_managers import settings
 import time
 
 # -----------------------------------------------------
-#  Traffic directly on site
+#  Traffic Directly into Site, one asset on site
 # -----------------------------------------------------
 def traffic_site():
     with settings(host_string='10.20.4.238'):
