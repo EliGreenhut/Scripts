@@ -4,7 +4,7 @@ from fabric.context_managers import settings
 import time
 
 # -----------------------------------------------------
-#  Traffic Directly into Site, one asset on site
+#  Direct Traffic into Site, One Asset on Site
 # -----------------------------------------------------
 def traffic_site():
     with settings(host_string='10.20.4.238'):
@@ -15,7 +15,7 @@ def traffic_site():
 
 
 # -----------------------------------------------------------------
-# Traffic in two assets (non-MSA), in parallel, related to one site
+# Traffic in Two non-MSA Assets of Same Site
 # -----------------------------------------------------------------
 def traffic_2assets():
     with settings(host_string='10.20.4.237'):
@@ -24,7 +24,7 @@ def traffic_2assets():
 
 
 # -----------------------------------------------------
-# Traffic in one MSA asset related to two sites
+# Traffic into One Site of MSA Asset
 # -----------------------------------------------------
 def traffic_msa_asset():
     with settings(host_string='10.20.4.238'):
@@ -35,7 +35,7 @@ def traffic_msa_asset():
 
 
 # -----------------------------------------------------
-# Attack on Network asset
+# Attack on Network Asset
 # -----------------------------------------------------
 def attack_nasset():
     with settings(host_string='10.20.4.237'):
