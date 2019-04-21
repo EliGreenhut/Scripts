@@ -45,6 +45,19 @@ def attack_nasset():
         run('python DP_SecurityAttacksSimulator.py --rate 80 --policy PO-S2-N-Atk3 --device 10.20.6.20 --dest 200.10.16.0 --attack 73 --duration 5', pty=False)
         run('python DP_SecurityAttacksSimulator.py --rate 60 --policy PO-S2-N-Atk4 --device 10.20.6.20 --dest 200.10.17.0 --attack 405 --duration 5', pty=False)
 
+# -----------------------------------------------------
+# Missing Data Alert #1
+# -----------------------------------------------------
+def mis_data_alert1():
+    with settings(host_string='10.20.4.245'):
+        run('python /root/DF_TrafficUtilizationSimulator.py --rate 55 --policy 1_AS-S1-DF --duration 15', pty=False)
+
+# -----------------------------------------------------
+# Missing Data Alert #1
+# -----------------------------------------------------
+def mis_data_alert1():
+    with settings(host_string='10.20.4.245'):
+        run('python /root/DF_TrafficUtilizationSimulator.py --rate 55 --policy 99_noSuchAsset --duration 15', pty=False)
 
 # -----------------------------------------------------
 # Traffic on Diverted asset (through SC)
@@ -66,6 +79,10 @@ if __name__ == '__main__':
     traffic_msa_asset()
     time.sleep(600)
     attack_nasset()
+    time.sleep(600)
+    mis_data_alert1 ()
+    time.sleep(600)
+    mis_data_alert2 ()
     time.sleep(600)
 
     env.user = 'root'  # Default user name for automation station
