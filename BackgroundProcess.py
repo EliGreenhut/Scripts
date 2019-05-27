@@ -4,7 +4,7 @@ from fabric.context_managers import settings
 import time
 
 # -----------------------------------------------------
-#  Direct Traffic into Site, One Asset on Site
+# Traffic into One Site, One Asset on Site
 # -----------------------------------------------------
 def traffic_site():
     with settings(host_string='10.20.4.238'):
@@ -15,7 +15,7 @@ def traffic_site():
 
 
 # -----------------------------------------------------------------
-# Traffic in Two non-MSA Assets of Same Site
+# Traffic into Two non-MSA Assets of Same Site
 # -----------------------------------------------------------------
 def traffic_2assets():
     with settings(host_string='10.20.4.237'):
