@@ -52,6 +52,7 @@ def mis_data_alert1():
     with settings(host_string='10.20.4.245'):
         run('python /root/DF_TrafficUtilizationSimulator.py --rate 55 --policy 1_AS-S1-DF --duration 15', pty=False)
         run('python /root/DF_TrafficUtilizationSimulator.py --rate 55 --policy 99_noSuchAsset --duration 15', pty=False)
+        run('python /root/DF_TrafficUtilizationSimulator.py --rate 55 --policy 1_AS-S1-NotDF --duration 15', pty=False)
 
 # -----------------------------------------------------
 # Traffic on Diverted asset (through SC)
