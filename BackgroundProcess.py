@@ -67,9 +67,10 @@ def ingress_egress():
 # -----------------------------------------------------
 def attack_id():
     with settings(host_string='10.20.4.228'):
-        run('./root/automation_simulators/bin/run_df_security_attacks_simulator.sh EliG-AttackId-108.txt', pty=False)
-        run('./root/automation_simulators/bin/run_df_security_attacks_simulator.sh EliG-AttackId-463.txt', pty=False)
-        run('./root/automation_simulators/bin/run_df_security_attacks_simulator.sh EliG-AttackId-200002.txt', pty=False)
+        run('cd /root/automation_simulators/bin/', pty=False)
+        run('./run_df_security_attacks_simulator.sh EliG-AttackId-108.txt', pty=False)
+        run('./run_df_security_attacks_simulator.sh EliG-AttackId-463.txt', pty=False)
+        run('./run_df_security_attacks_simulator.sh EliG-AttackId-200002.txt', pty=False)
 
 if __name__ == '__main__':
     env.user = 'root'  # Default VMs user name
