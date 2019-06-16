@@ -6,8 +6,8 @@ env.user = 'root'  # Default VMs user name
 env.password = 'securitydam'
 
 ##Master Setup (Test setup)
- UPGRADE_1 = 'sdcc_upgrade_tni:19.6,10.20.4.81,10.20.4.4,10.20.4.70,all'
- UPGRADE_11 = 'sdcc_upgrade_mbi:19.6,10.20.4.132,10.20.4.4,all'
+UPGRADE_1 = 'sdcc_upgrade_tni:19.6,10.20.4.81,10.20.4.4,10.20.4.70,all'
+UPGRADE_11 = 'sdcc_upgrade_mbi:19.6,10.20.4.132,10.20.4.4,all'
 
 ## UPGRADE_1 = 'sdcc_upgrade_tni:SDCC-7583,10.20.4.81,10.20.4.4,10.20.4.70,all'
 ## UPGRADE_11 = 'sdcc_upgrade_mbi:SDCC-7583,10.20.4.132,10.20.4.4,all'
