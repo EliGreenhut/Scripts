@@ -50,17 +50,17 @@ def attack_nasset():
 # -----------------------------------------------------
 def mis_data_alert1():
     with settings(host_string='10.20.4.245'):
-        run('python /root/DF_TrafficUtilizationSimulator.py --rate 55 --policy 1_AS-S1-DF --duration 15', pty=False)
-        run('python /root/DF_TrafficUtilizationSimulator.py --rate 55 --policy 99_noSuchAsset --duration 15', pty=False)
-        run('python /root/DF_TrafficUtilizationSimulator.py --rate 55 --policy 1_AS-S1-NotDF --duration 15', pty=False)
+        run('python /root/DF_TrafficUtilizationSimulator.py --rate 55 --policy 1_AS-S1-DF --duration 10', pty=False)
+        run('python /root/DF_TrafficUtilizationSimulator.py --rate 55 --policy 99_noSuchAsset --duration 10', pty=False)
+        run('python /root/DF_TrafficUtilizationSimulator.py --rate 55 --policy 1_AS-S1-NotDF --duration 10', pty=False)
 
 # -----------------------------------------------------
 # Traffic on Diverted asset (through SC)
 # -----------------------------------------------------
 def ingress_egress():
     with settings(host_string='10.20.4.228'):
-        run('python /root/automation_japan/Simulators/NetflowSimulator.py --rate 30 --duration 20 --asset 111.1.6.0 --sdcc 10.20.4.132 --port 9996 >& /dev/null < /dev/null &', pty=False)
-        run('python /root/automation_japan/Simulators/NetflowSimulator.py --rate 20 --duration 20 --asset 111.1.6.0 --sdcc 10.20.4.132 --port 9995 >& /dev/null < /dev/null &', pty=False)
+        run('python /root/automation_latvia/Simulators/NetflowSimulator.py --rate 30 --duration 20 --asset 111.1.6.0 --sdcc 10.20.4.132 --port 9996 >& /dev/null < /dev/null &', pty=False)
+        run('python /root/automation_latvia/Simulators/NetflowSimulator.py --rate 20 --duration 20 --asset 111.1.6.0 --sdcc 10.20.4.132 --port 9995 >& /dev/null < /dev/null &', pty=False)
 
 # -----------------------------------------------------
 # Attack IDs
