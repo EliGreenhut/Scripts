@@ -36,12 +36,12 @@ UPGRADE_STRING_MSSP = '"' + '","'.join(upgrade.replace(',', '\,') for upgrade in
 
 def run_update():
     with settings(host_string=env.hosts[0]):
-        run('fab -f /root/automation_latvia/fabfile.py auto_upgrade:' + UPGRADE_STRING_L )
+        run('fab -f /root/automation_19.3/fabfile.py auto_upgrade:' + UPGRADE_STRING_L )
         print '###########################################################'
         print '########## END OF PRIMARY SETUP (MASTER) UPGRADE ##########'
         print '###########################################################'
 
-##        run('fab -f /root/automation_kenya/fabfile.py auto_upgrade:' + UPGRADE_STRING_K )
+##        run('fab -f /root/automation_19.3/fabfile.py auto_upgrade:' + UPGRADE_STRING_K )
 ##        print '################################################################'
 ##        print '########## END OF SECONDARY SETUP (KENYA_SP2) UPGRADE ##########'
 ##        print '################################################################'
