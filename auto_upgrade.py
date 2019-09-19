@@ -1,11 +1,17 @@
 from fabric.api import env, run
 from fabric.context_managers import settings
 
-env.hosts = ['10.20.4.228']  # Default remote host IP address. Overidden during deployment
-env.user = 'root'  # Default VMs user name
-env.password = 'securitydam'
+##### Old Automation station #####
+## env.hosts = ['10.20.4.228']  # Default remote host IP address. Overidden during deployment
+## env.user = 'root'  # Default VMs user name
+## env.password = 'securitydam'
 
-##Master Setup (Test setup)
+##### New Automation station #####
+env.hosts = ['10.20.4.10']
+env.user = 'root'
+env.password = '123456'
+
+## Master Setup (Test setup)
 UPGRADE_1 = 'sdcc_upgrade_tni:19.9,10.20.4.81,10.20.4.4,10.20.4.70,all'
 UPGRADE_11 = 'sdcc_upgrade_mbi:19.9,10.20.4.132,10.20.4.4,all'
 
