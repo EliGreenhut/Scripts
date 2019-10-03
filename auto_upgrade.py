@@ -12,8 +12,8 @@ env.user = 'root'
 env.password = '123456'
 
 ## Master Setup (Test setup)
-UPGRADE_1 = 'sdcc_upgrade_tni:19.9,10.20.4.81,10.20.4.4,10.20.4.70,all'
-UPGRADE_11 = 'sdcc_upgrade_mbi:19.9,10.20.4.132,10.20.4.4,all'
+UPGRADE_1 = 'sdcc_upgrade_tni:19.9.1,10.20.4.81,10.20.4.4,10.20.4.70,all'
+UPGRADE_11 = 'sdcc_upgrade_mbi:19.9.1,10.20.4.132,10.20.4.4,all'
 
 ## UPGRADE_1 = 'sdcc_upgrade_tni:19.5.2,10.20.4.81,10.20.4.4,10.20.4.70,all'
 ## UPGRADE_11 = 'sdcc_upgrade_mbi:19.5.2,10.20.4.132,10.20.4.4,all'
