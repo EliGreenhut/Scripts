@@ -11,6 +11,7 @@ env.hosts = ['10.20.4.10']
 env.user = 'root'
 env.password = '123456'
 
+
 ## Master Setup (Test setup)
 UPGRADE_1 = 'sdcc_upgrade_tni:QA,10.20.4.81,10.20.4.4,10.20.4.70,all'
 UPGRADE_11 = 'sdcc_upgrade_mbi:QA,10.20.4.132,10.20.4.4,all'
