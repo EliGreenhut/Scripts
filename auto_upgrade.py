@@ -16,7 +16,7 @@ UPGRADE_1 = 'sdcc_upgrade_tni:QA,10.20.4.81,10.20.4.4,10.20.4.70,all'
 UPGRADE_11 = 'sdcc_upgrade_mbi:QA,10.20.4.132,10.20.4.4,all'
 
 ##Screen comparison
-UPGRADE_2 = 'sdcc_upgrade_sni:kenya_sp2,10.20.4.72,all'
+## UPGRADE_2 = 'sdcc_upgrade_sni:kenya_sp2,10.20.4.72,all'
 
 ##Master Setup (For migration tests)
 UPGRADE_4 = 'sdcc_upgrade_tni:kenya_sp2,10.20.4.68,10.20.4.122,10.20.4.9,all'
