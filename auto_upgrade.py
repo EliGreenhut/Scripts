@@ -6,7 +6,7 @@ from fabric.context_managers import settings
 ## env.user = 'root'  # Default VMs user name
 ## env.password = 'securitydam'
 
-##### New Automation station #####
+### New Automation station #####
 env.hosts = ['10.20.4.10']
 env.user = 'root'
 env.password = '123456'
